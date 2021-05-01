@@ -1,3 +1,5 @@
+# Stack can have a dynamic or fixed size.
+
 class Stack:
     def __init__(self):
         self.stack = []
@@ -25,6 +27,9 @@ class Stack:
 
     def printStack(self):
         print(self.stack)
+        
+    def stackSize(self):
+        print(len(self.stack))
 
 stack1 = Stack()
 stack1.push(10)
@@ -44,4 +49,6 @@ stack1.printStack()
 print(stack1.isEmpty())
 print(stack2.peek())
 stack2.printStack()
+stack1.stackSize()
+
 
