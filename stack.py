@@ -1,47 +1,47 @@
-def createStack():
-    stack = []
-    return stack
+class Stack:
+    def __init__(self):
+        self.stack = []
 
-def isEmpty(stack):
-    if len(stack) == 0:
-        return True
-    else:
-        return False
+    def isEmpty(self):
+        if len(self.stack) == 0:
+            return True
+        else:
+            return False
 
-def push(stack, data):
-    stack.append(data)
+    def push(self, data):
+        self.stack.append(data)
 
-def pop(stack):
-    if isEmpty(stack):
-        return "Stack is Empty"
-    else:
-        return stack.pop()
+    def pop(self):
+        if self.isEmpty():
+            return "Stack is Empty"
+        else:
+            return self.stack.pop()
 
-def peek(stack):
-    if isEmpty(stack):
-        return "Stack is Empty"
-    else:
-        return stack[len(stack)-1]
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is Empty"
+        else:
+            return self.stack[len(self.stack)-1]
 
-def printStack(stack):
-    print(stack)
+    def printStack(self):
+        print(self.stack)
 
-stack1 = createStack()
-push(stack1, 10)
-push(stack1, 20) 
-push(stack1, 30)
-push(stack1, 40)
+stack1 = Stack()
+stack1.push(10)
+stack1.push(20)
+stack1.push(30)
+stack1.push(40)
 
-stack2 = createStack()
-push(stack2, 50)
-push(stack2, 60) 
-push(stack2, 70)
-push(stack2, 80)
+stack2 = Stack()
+stack2.push(50)
+stack2.push(60)
+stack2.push(70)
+stack2.push(80)
 
-printStack(stack1)
-pop(stack1)
-printStack(stack1)
-printStack(stack2)
-print(peek(stack1))
-print(peek(stack2))
+stack1.printStack()
+stack1.pop()
+stack1.printStack()
+print(stack1.isEmpty())
+print(stack2.peek())
+stack2.printStack()
 
