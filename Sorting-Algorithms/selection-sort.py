@@ -1,4 +1,5 @@
-def selectionSort(arr):
+
+def selection_sort(arr):
     for i in range(len(arr)):
         minIndex = i
         for j in range(i+1,len(arr)):
@@ -9,5 +10,5 @@ def selectionSort(arr):
     return arr
 
 
-print(selectionSort([64, 25, 12, 22, 11]))
+print(selection_sort([64, 25, 12, 22, 11]))
 
