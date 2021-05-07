@@ -57,8 +57,8 @@ def delete(root, data):
     return root
 
 def printLevelOrder(root):
-    height = maxDepth(root)
-    for i in range(1,height+2):
+    tree_height = height(root)
+    for i in range(1,tree_height+2):
         printGivenLevel(root, i)
 
 def printGivenLevel(root, level):
@@ -100,14 +100,12 @@ def maxValue(root):
         temp = temp.right
     print(temp.data)
 
-# maxDepth or height is same in a Tree
-
-def maxDepth(root):
+def height(root):
     if root is None:
         return -1
     else:
-        lDepth = maxDepth(root.left)
-        rDepth = maxDepth(root.right)
+        lDepth = height(root.left)
+        rDepth = height(root.right)
 
         return max(lDepth, rDepth)+1
 
@@ -127,7 +125,7 @@ minValue(root)
 
 print("\n")
 
-print(maxDepth(root))
+print(height(root))
 
 print("\n")
 
