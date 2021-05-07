@@ -100,7 +100,8 @@ def maxValue(root):
         temp = temp.right
     print(temp.data)
 
-# height of the tree is defined as the number of edges or sometimes as the number of nodes. I am assuming height is number of edges here
+# height of the tree is defined as the (number of nodes) or (number of edges) along the longest path from the root node down to the farthest leaf node.
+# I am assuming height is number of edges here
 # height is always equal to maxDepth
 def height(root):
     if root is None:
