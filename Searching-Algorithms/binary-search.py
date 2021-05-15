@@ -11,8 +11,8 @@ def binary_search(arr, startIndex, endIndex, x):
             return binary_search(arr, midIndex+1, endIndex, x)
 
 arr = [1,2,3,4,5,6]
-print(binary_search(arr,0,len(arr),6))
+print(binary_search(arr,0,len(arr)-1,6))
 arr = [ 2, 3, 4, 10, 40 ]
-print(binary_search(arr,0,len(arr),10))
+print(binary_search(arr,0,len(arr)-1,10))
     
  
