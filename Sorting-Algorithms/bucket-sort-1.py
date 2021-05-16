@@ -11,22 +11,22 @@ def insertion_sort(arr):
     return arr
 
 def bucket_sort(arr):
-    bucket = []
+    buckets = []
     
     for i in range(10):
-        bucket.append([])
+        buckets.append([])
 
     for j in arr:
         index = int(j*10)
-        bucket[index].append(j)
+        buckets[index].append(j)
 
     for i in range(10):
-        bucket[i] = insertion_sort(bucket[i])
+        buckets[i] = insertion_sort(buckets[i])
         
     k = 0
     for i in range(10):
-        for j in range(len(bucket[i])):
-            arr[k] = bucket[i][j]
+        for j in range(len(buckets[i])):
+            arr[k] = buckets[i][j]
             k += 1
 
     return arr
@@ -34,3 +34,4 @@ def bucket_sort(arr):
 
 arr = [0, 0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
 print(bucket_sort(arr))
+
