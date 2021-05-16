@@ -22,13 +22,15 @@ def partition(arr, start, end):
 def quick_sort(arr, start, end):
     if start >= end:
         return
-    
-    pivotIndex = partition(arr, start, end)
-    quick_sort(arr, start, pivotIndex-1)
-    quick_sort(arr, pivotIndex+1, end)
+    # Modern compiler basically do tail call elimination to optimize the tail recursive code themselves.
+    # Quick Sort Tail Call Optimization
+    # We can limit the worst case auxiliary space to O(Log n)
+    while start < end :
+        pivotIndex = partition(arr, start, end)
+        quick_sort(arr, start, pivotIndex-1)
+        start = pivotIndex + 1
 
 
 arr = [10, 80, 30, 90, 40, 50, 70]
 quick_sort(arr,0,len(arr)-1)
 print(arr)
-
