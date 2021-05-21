@@ -6,7 +6,7 @@ class Stack:
         self.queue2 = deque()
     
     def isEmpty(self):
-        return True if self.queue2 else False
+        return True if len(self.queue2)==0 else False
 
     def push(self, data):
         self.queue1.append(data)
@@ -24,3 +24,4 @@ stack1.push(20)
 stack1.push(30)
 stack1.push(40)
 print(stack1.pop())
+print(stack1.isEmpty())
