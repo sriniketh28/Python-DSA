@@ -16,9 +16,13 @@ class Stack:
         self.queue1, self.queue2 = self.queue2, self.queue1
 
     def pop(self):
-        return self.queue2.popleft()
+        if self.queue2:
+            return self.queue2.popleft()
+        return -1
 
 stack1 = Stack()
+print(stack1.pop())
+print(stack1.isEmpty())
 stack1.push(10)
 stack1.push(20)
 stack1.push(30)
