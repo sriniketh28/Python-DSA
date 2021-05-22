@@ -58,7 +58,7 @@ def delete(root, data):
 
 def printLevelOrder(root):
     tree_height = height(root)
-    for i in range(1,tree_height+2):
+    for i in range(1,tree_height+1):
         printGivenLevel(root, i)
 
 def printGivenLevel(root, level):
@@ -101,11 +101,11 @@ def maxValue(root):
     print(temp.data)
 
 # height of the tree is defined as the (number of nodes) or (number of edges) along the longest path from the root node down to the farthest leaf node.
-# I am assuming height is number of edges here
+# I am assuming height is number of nodes here
 # height is always equal to maxDepth
 def height(root):
     if root is None:
-        return -1
+        return 0
     else:
         lDepth = height(root.left)
         rDepth = height(root.right)
